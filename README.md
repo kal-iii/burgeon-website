@@ -113,5 +113,28 @@
     </footer>
 </body>
 </html>
+{
+  "name": "Burgeon Enterprises",
+  "short_name": "Burgeon",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#002147",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+self.addEventListener('install', (event) => {
+    console.log('Service Worker installed');
+});
+
+self.addEventListener('fetch', (event) => {
+    event.respondWith(fetch(event.request));
+});
+
 # burgeon-website
 Burgeon Enterprises Website
